@@ -1,0 +1,55 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  touch-action: none;
+  user-select: none;
+}
+
+.bg {
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(https://cdn.dribbble.com/users/3474264/screenshots/11222954/media/238ffe693cece80e5add668b12937b85.png);
+  background-size: cover;
+  transform: scale(1.1);
+}
+
+canvas {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 13px 20px;
+  font-size: 15px;
+  font-family: Lato, Arial;
+  color: #333;
+  box-sizing: border-box;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+  background: rgba(255, 255, 255, .8);
+  border-radius: 30px;
+  width: calc(100% - 40px);
+  text-transform: uppercase;
+
+  &.game-over {
+    color: transparent;
+    background: black;
+
+    &:before {
+      content: "GAME OVER!";
+      color: #fff;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
